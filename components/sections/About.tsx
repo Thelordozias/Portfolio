@@ -2,11 +2,13 @@
  * components/sections/About.tsx
  *
  * About section — two-column layout.
- * Left: personal story paragraphs.
- * Right: skill tags grid.
+ * Left: avatar photo + personal story.
+ * Right: skill tags grouped by category.
  *
  * Server Component — no interactivity needed.
  */
+
+import Image from "next/image";
 
 const skillGroups = [
   {
@@ -45,8 +47,31 @@ export default function About() {
       {/* ── Two-column grid ── */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-start">
 
-        {/* Story */}
-        <div className="space-y-5">
+        {/* Photo + Story */}
+        <div className="space-y-7">
+
+          {/* Avatar */}
+          <div className="relative w-36 h-36 md:w-44 md:h-44">
+            {/* Accent glow behind the photo */}
+            <div
+              className="absolute inset-0 rounded-sm"
+              style={{
+                background:
+                  "radial-gradient(ellipse 80% 80% at 50% 50%, rgba(0,212,255,0.15) 0%, transparent 70%)",
+                transform: "scale(1.3)",
+              }}
+            />
+            <Image
+              src="/avatar.jpg"
+              alt="Ozias Kafando"
+              fill
+              className="object-cover rounded-sm"
+              style={{ border: "1px solid rgba(255,255,255,0.1)" }}
+              priority
+            />
+          </div>
+
+          {/* Story */}
           <p className="font-mono text-sm text-muted leading-loose">
             Originally from{" "}
             <strong className="text-white font-medium">Burkina Faso</strong>, I

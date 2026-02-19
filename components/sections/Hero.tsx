@@ -142,7 +142,7 @@ export default function Hero() {
           </Link>
 
           <a
-            href="/resume.pdf"
+            href="/Resume (2).pdf"
             download
             className="inline-flex items-center gap-2 px-6 py-3 font-mono text-xs tracking-widest uppercase transition-all hover:text-accent"
             style={{ border: "1px solid rgba(255,255,255,0.07)", color: "var(--muted)" }}
