@@ -69,7 +69,7 @@ export default function Hero() {
           animate="visible"
           custom={0.2}
         >
-          // CS Student · Researcher · Builder · Graduating May 2026
+          {"// CS Student · Researcher · Builder · Graduating May 2026"}
         </motion.div>
 
         {/* Name */}
